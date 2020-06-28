@@ -1,0 +1,101 @@
+{
+  "basePath": "/",
+  "consumes": [
+    "application/json"
+  ],
+  "info": {
+    "title": "API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/city/{city}/users": {
+      "get": {
+        "operationId": "get_users",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        },
+        "tags": [
+          "default"
+        ]
+      },
+      "parameters": [
+        {
+          "in": "path",
+          "name": "city",
+          "required": true,
+          "type": "string"
+        }
+      ]
+    },
+    "/instructions": {
+      "get": {
+        "operationId": "get_users",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        },
+        "tags": [
+          "default"
+        ]
+      }
+    },
+    "/user/{id}": {
+      "get": {
+        "operationId": "get_users",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "tags": [
+          "default"
+        ]
+      },
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "string"
+        }
+      ]
+    },
+    "/users": {
+      "get": {
+        "operationId": "get_users",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        },
+        "tags": [
+          "default"
+        ]
+      }
+    }
+  },
+  "produces": [
+    "application/json"
+  ],
+  "responses": {
+    "MaskError": {
+      "description": "When any error occurs on mask"
+    },
+    "ParseError": {
+      "description": "When a mask can't be parsed"
+    }
+  },
+  "swagger": "2.0",
+  "tags": [
+    {
+      "description": "Default namespace",
+      "name": "default"
+    }
+  ]
+}
